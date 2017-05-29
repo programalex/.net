@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="crud" Class="DataUsuarioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-R14S3562;Initial Catalog=crud;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="crudConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.consept" Member="consepts">
+    <Type Name="consept">
+      <Column Name="NumeroIdentificacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.crud_actualizar" Method="crud_actualizar">
+    <Parameter Name="NumeroIdentificacion" Parameter="numeroIdentificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoDocumento" Parameter="tipoDocumento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.crud_eliminar" Method="crud_eliminar">
+    <Parameter Name="NumeroIdentificacion" Parameter="numeroIdentificacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.crud_consulta" Method="crud_consulta">
+    <Parameter Name="NumeroIdentificacion" Parameter="numeroIdentificacion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="crud_consultaResult">
+      <Column Name="NumeroIdentificacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.consulta" Method="consulta">
+    <ElementType Name="consultaResult">
+      <Column Name="NumeroIdentificacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.insertar" Method="insertar">
+    <Parameter Name="NumeroIdentificacion" Parameter="numeroIdentificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoDocumento" Parameter="tipoDocumento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.crud_insertar" Method="crud_insertar">
+    <Parameter Name="NumeroIdentificacion" Parameter="numeroIdentificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoDocumento" Parameter="tipoDocumento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="crud_insertarResult">
+      <Column Name="NumeroIdentificacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

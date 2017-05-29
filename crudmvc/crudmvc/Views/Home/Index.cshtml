@@ -1,0 +1,17 @@
+﻿<h3>Datos</h3>
+<div ng-controller="mainController">
+
+    <table class="table table-striped">
+        <tr ng-repeat="datosr in datos">
+            <td>{{datosr.datos}}</td>
+            <td class="text-right">
+                <button class="btn btn-danger">x</button>
+
+            </td>
+
+        </tr>
+
+    </table>
+    <input type="text" required ng-model="newdatos" />
+    <a href="#" class="btn btn-primary" ng-click="AddDato()">Add Dato </a>
+</div>

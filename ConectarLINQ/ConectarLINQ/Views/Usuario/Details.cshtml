@@ -1,0 +1,48 @@
+﻿@model ConectarLINQ.Models.consept
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalle del Usuario</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDocumento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroIdentificacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.NumeroIdentificacion }) |
+    @Html.ActionLink("volver a la lista", "Index")
+</p>
